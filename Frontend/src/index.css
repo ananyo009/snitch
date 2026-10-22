@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #ffffff;
+    --text-main: #09090b;
+    --text-muted: #52525b;
+    --input-bg: #f4f4f5;
+    --input-border: #d4d4d8;
+    --input-border-focus: #09090b;
+    --card-border: #e4e4e7;
+    --btn-bg: #09090b;
+    --btn-text: #ffffff;
+    --btn-hover: #27272a;
+    --overlay-color: rgba(180, 20, 20, 0.45);
+  }
+
+  .dark {
+    --bg-main: #09090b;
+    --text-main: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --input-bg: #18181b;
+    --input-border: #27272a;
+    --input-border-focus: #f4f4f5;
+    --card-border: #27272a;
+    --btn-bg: #f4f4f5;
+    --btn-text: #09090b;
+    --btn-hover: #e4e4e7;
+    --overlay-color: rgba(140, 15, 15, 0.65);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.font-serif-title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
